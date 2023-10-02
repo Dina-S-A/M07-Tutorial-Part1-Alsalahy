@@ -1,1 +1,26 @@
-Hello world!
+
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %> <!--we used - instead of = cause = would show it as a line-->
+    
+        <div class="blogs content">
+    <h2>All Blogs</h2>  
+    <% if (blogs.length>0) {  %>  <!-- this code and what is between will execute if blogs has anything in it-->
+        <% blogs.forEach(blog => { %>
+
+         <a class="single" href="/blogs/<%= blog._id %>">   <!--here we are adding anchore to direct so bothe h3 and p are links direct the page to url including the id of the blog-->
+
+             <h3 class="title" ><%= blog.title%></h3>
+            <p class="snippet"><%= blog.snippet%></p>
+        </a>
+        <% })%>
+    <% } else {%>  
+        <p >There are no blogs to display...</p>
+        <% }%>
+    </div> 
+    
+    <%- include('./partials/footer.ejs') %>
+
+</body>
+</html>
