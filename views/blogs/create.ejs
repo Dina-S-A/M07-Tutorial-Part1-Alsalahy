@@ -1,12 +1,12 @@
 
 <html lang="en">
 
-    <%- include('./partials/head.ejs') %>
+    <%- include('../partials/head.ejs') %>
     
     <body>
     <h1>Home</h1>
     
-    <%- include('./partials/nav.ejs') %>
+    <%- include('../partials/nav.ejs') %>
     <div class="create-blog content">
     <form action="/blogs" method="post"> <!--acting attribute is where we want to send this form to, post is a request-->
         <label for="title">Blog Tilte:</label>
@@ -19,7 +19,7 @@
 
     </form>
     </div>  
-    <%- include('./partials/footer.ejs') %>
+    <%- include('../partials/footer.ejs') %>
     
 </body>
 </html>
